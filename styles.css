@@ -493,12 +493,12 @@ body{
 }
 
 .rose-container{
-  width:min(180px, 40vw);
-  height:min(220px, 50vw);
-  margin:0 auto 20px;
+  width:min(280px, 55vw);
+  height:min(340px, 70vw);
+  margin:0 auto 30px;
   position:relative;
   opacity:0;
-  transform:translateY(20px) scale(0.85);
+  transform:translateY(30px) scale(0.6);
   transition:opacity 1.2s var(--ease), transform 1.2s var(--ease);
 }
 
@@ -549,26 +549,26 @@ body{
   opacity:0;
   transform-origin:center;
   transform:scale(0) rotate(var(--base-rot, 0deg));
-  transition:opacity 0.8s var(--ease), transform 1s var(--ease);
+  transition:opacity 0.8s var(--ease), transform 1.2s var(--ease);
 }
 
-.rose-container.is-visible .rose__petal--outer1{--base-rot:0deg; opacity:1; transform:scale(1) rotate(0deg); transition-delay:1.4s}
-.rose-container.is-visible .rose__petal--outer2{--base-rot:45deg; opacity:1; transform:scale(1) rotate(45deg); transition-delay:1.5s}
-.rose-container.is-visible .rose__petal--outer3{--base-rot:90deg; opacity:1; transform:scale(1) rotate(90deg); transition-delay:1.6s}
-.rose-container.is-visible .rose__petal--outer4{--base-rot:135deg; opacity:1; transform:scale(1) rotate(135deg); transition-delay:1.7s}
-.rose-container.is-visible .rose__petal--outer5{--base-rot:180deg; opacity:1; transform:scale(1) rotate(180deg); transition-delay:1.8s}
-.rose-container.is-visible .rose__petal--outer6{--base-rot:225deg; opacity:1; transform:scale(1) rotate(225deg); transition-delay:1.9s}
-.rose-container.is-visible .rose__petal--outer7{--base-rot:270deg; opacity:1; transform:scale(1) rotate(270deg); transition-delay:2s}
-.rose-container.is-visible .rose__petal--outer8{--base-rot:315deg; opacity:1; transform:scale(1) rotate(315deg); transition-delay:2.1s}
+.rose-container.is-visible .rose__petal--outer1{--base-rot:0deg; opacity:1; transform:scale(1.05) rotate(0deg); transition-delay:1.4s}
+.rose-container.is-visible .rose__petal--outer2{--base-rot:45deg; opacity:1; transform:scale(1.05) rotate(45deg); transition-delay:1.5s}
+.rose-container.is-visible .rose__petal--outer3{--base-rot:90deg; opacity:1; transform:scale(1.05) rotate(90deg); transition-delay:1.6s}
+.rose-container.is-visible .rose__petal--outer4{--base-rot:135deg; opacity:1; transform:scale(1.05) rotate(135deg); transition-delay:1.7s}
+.rose-container.is-visible .rose__petal--outer5{--base-rot:180deg; opacity:1; transform:scale(1.05) rotate(180deg); transition-delay:1.8s}
+.rose-container.is-visible .rose__petal--outer6{--base-rot:225deg; opacity:1; transform:scale(1.05) rotate(225deg); transition-delay:1.9s}
+.rose-container.is-visible .rose__petal--outer7{--base-rot:270deg; opacity:1; transform:scale(1.05) rotate(270deg); transition-delay:2s}
+.rose-container.is-visible .rose__petal--outer8{--base-rot:315deg; opacity:1; transform:scale(1.05) rotate(315deg); transition-delay:2.1s}
 
-.rose-container.is-visible .rose__petal--mid1{--base-rot:22deg; opacity:1; transform:scale(0.6) rotate(22deg); transition-delay:2.3s}
-.rose-container.is-visible .rose__petal--mid2{--base-rot:67deg; opacity:1; transform:scale(0.6) rotate(67deg); transition-delay:2.4s}
-.rose-container.is-visible .rose__petal--mid3{--base-rot:112deg; opacity:1; transform:scale(0.6) rotate(112deg); transition-delay:2.5s}
-.rose-container.is-visible .rose__petal--mid4{--base-rot:157deg; opacity:1; transform:scale(0.6) rotate(157deg); transition-delay:2.6s}
-.rose-container.is-visible .rose__petal--mid5{--base-rot:202deg; opacity:1; transform:scale(0.6) rotate(202deg); transition-delay:2.7s}
-.rose-container.is-visible .rose__petal--mid6{--base-rot:247deg; opacity:1; transform:scale(0.6) rotate(247deg); transition-delay:2.8s}
-.rose-container.is-visible .rose__petal--mid7{--base-rot:292deg; opacity:1; transform:scale(0.6) rotate(292deg); transition-delay:2.9s}
-.rose-container.is-visible .rose__petal--mid8{--base-rot:337deg; opacity:1; transform:scale(0.6) rotate(337deg); transition-delay:3s}
+.rose-container.is-visible .rose__petal--mid1{--base-rot:22deg; opacity:1; transform:scale(0.75) rotate(22deg); transition-delay:2.3s}
+.rose-container.is-visible .rose__petal--mid2{--base-rot:67deg; opacity:1; transform:scale(0.75) rotate(67deg); transition-delay:2.4s}
+.rose-container.is-visible .rose__petal--mid3{--base-rot:112deg; opacity:1; transform:scale(0.75) rotate(112deg); transition-delay:2.5s}
+.rose-container.is-visible .rose__petal--mid4{--base-rot:157deg; opacity:1; transform:scale(0.75) rotate(157deg); transition-delay:2.6s}
+.rose-container.is-visible .rose__petal--mid5{--base-rot:202deg; opacity:1; transform:scale(0.75) rotate(202deg); transition-delay:2.7s}
+.rose-container.is-visible .rose__petal--mid6{--base-rot:247deg; opacity:1; transform:scale(0.75) rotate(247deg); transition-delay:2.8s}
+.rose-container.is-visible .rose__petal--mid7{--base-rot:292deg; opacity:1; transform:scale(0.75) rotate(292deg); transition-delay:2.9s}
+.rose-container.is-visible .rose__petal--mid8{--base-rot:337deg; opacity:1; transform:scale(0.75) rotate(337deg); transition-delay:3s}
 
 .rose__center{
   opacity:0;
