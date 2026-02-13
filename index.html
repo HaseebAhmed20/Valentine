@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1a0a12" />
+    <title>For Naib — A Valentine Love Letter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <canvas id="cinema" aria-hidden="true"></canvas>
+      <div class="heartbeat" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+    </div>
+
+    <header class="topbar" role="banner">
+      <button id="audioToggle" class="audio" type="button" aria-pressed="false" aria-label="Toggle music">
+        <span class="audio__dot" aria-hidden="true"></span>
+        <span class="audio__label">Music</span>
+      </button>
+
+      <nav class="dots" aria-label="Scenes">
+        <button class="dot is-active" type="button" data-to="scene-intro" aria-label="Go to Opening Scene"></button>
+        <button class="dot" type="button" data-to="scene-letter" aria-label="Go to Love Letter"></button>
+        <button class="dot" type="button" data-to="scene-distance" aria-label="Go to Distance"></button>
+        <button class="dot" type="button" data-to="scene-memories" aria-label="Go to Memories"></button>
+        <button class="dot" type="button" data-to="scene-promise" aria-label="Go to Promise"></button>
+        <button class="dot" type="button" data-to="scene-final" aria-label="Go to Final Scene"></button>
+      </nav>
+    </header>
+
+    <main id="story" class="story" role="main">
+      <section id="scene-intro" class="scene scene--intro" aria-label="Opening Scene">
+        <div class="scene__inner">
+          <div class="sigil" aria-hidden="true">
+            <svg class="sigil__svg" viewBox="0 0 200 180" role="img" aria-label="A heart forming">
+              <defs>
+                <linearGradient id="heartGlow" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffd4e3" stop-opacity="0.95" />
+                  <stop offset="0.55" stop-color="#c11b4a" stop-opacity="0.92" />
+                  <stop offset="1" stop-color="#f3d7a3" stop-opacity="0.9" />
+                </linearGradient>
+                <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                id="heartPath"
+                class="sigil__path"
+                d="M100 165s-52-31-78-66C4 72 9 41 29 28c17-11 40-6 54 9 7 7 12 16 17 25 5-9 10-18 17-25 14-15 37-20 54-9 20 13 25 44 7 71-26 35-78 66-78 66z"
+                fill="none"
+                stroke="url(#heartGlow)"
+                stroke-width="3.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                filter="url(#softGlow)"
+              />
+              <path
+                class="sigil__fill"
+                d="M100 165s-52-31-78-66C4 72 9 41 29 28c17-11 40-6 54 9 7 7 12 16 17 25 5-9 10-18 17-25 14-15 37-20 54-9 20 13 25 44 7 71-26 35-78 66-78 66z"
+                fill="url(#heartGlow)"
+                opacity="0"
+              />
+            </svg>
+          </div>
+
+          <p class="eyebrow reveal">For the one who owns my heart —</p>
+          <h1 class="title reveal">Naib</h1>
+          <p class="sub reveal">If love could become a place, it would feel like you.</p>
+
+          <div class="cta">
+            <button id="begin" class="begin" type="button">Begin</button>
+            <p class="hint">Scroll slowly. Let the words arrive like a whisper.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-letter" class="scene" aria-label="Love Letter">
+        <div class="scene__inner">
+          <h2 class="heading reveal">A letter I never want to stop writing</h2>
+
+          <article class="letter" aria-label="Handwritten love letter">
+            <div class="letter__paper" role="group" aria-label="Letter text">
+              <p class="letter__salute">My Naib,</p>
+              <p id="typed" class="letter__typed" aria-live="polite"></p>
+              <p class="letter__signoff">Always,</p>
+              <p class="letter__name">Your heart.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="scene-distance" class="scene" aria-label="Distance and Connection">
+        <div class="scene__inner">
+          <h2 class="heading reveal">Even when we’re apart, I’m still with you</h2>
+
+          <div class="connection" aria-hidden="true">
+            <div class="connection__heart connection__heart--left"></div>
+            <div class="connection__line"></div>
+            <div class="connection__heart connection__heart--right"></div>
+            <div class="connection__stars"></div>
+          </div>
+
+          <p class="prose reveal">
+            Yehhhh doooriyaan kbb khtmm hon giii meri Jan 🥺 ptaa nahiii khtm honii yaa hmesha ke liye zyada ho janii 🙃 Khair Meri paroo Yeh distances kuchh bhii nhii haiii mery liye Qkay Ap toh hmesha hi mere Dill mein hoti hoo bilkul mery pass 🥺 Meri uss imaginary world meinn jahan Apko koi bhii mujhhh say cheen nhii sktaa 🥺 Yeh duniyaa mery liye bhtt hi khubsurat haii Real life mein Allah jany kya honaa kya nae So Mujhe Yeh khubsurat moments YEH Special memories jeenay dein These Unforgettable moments Meri Paroo 🥺 Merya Pyaar Mera ishq In distances pe munhasirr nhii Chahay jo bhii ho jaye Mein Apni Naib ko kabhiii bhii khiiinn bhii akelaa nhii chorooo gaa 🫠
+          </p>
+        </div>
+      </section>
+
+      <section id="scene-memories" class="scene" aria-label="Memories and Emotion">
+        <div class="scene__inner">
+          <h2 class="heading reveal">The moments I keep, the feeling I choose</h2>
+          <p class="prose reveal">
+            Some memories don't need pictures. They live in small details Like Jesy uss din milay thyyy Mujhe 1,1 Palll yaad haii uss din kaa acha bhi bura bhii 🥺 yeh kuch meri fvrt pictures hain jo hmesha meray dill pe chpii rhein giii orr inn sy pyaar barhtaa rhyy gaaa. Special Photos 🫣 Yn Hmera milnaa Hain in hand and Creating many sweet memories together Mri Pyari si Jan Meray ISHQ NAIB 🫠💞
+          </p>
+
+          <div class="frames" role="list" aria-label="Memory frames">
+  <div class="frame" role="listitem">
+    <div class="frame__inner">
+      <img src="1.jpeg" alt="A precious memory with Naib" />
+    </div>
+  </div>
+  <div class="frame" role="listitem">
+    <div class="frame__inner">
+      <img src="2.jpeg" alt="Another beautiful moment" />
+    </div>
+  </div>
+  <div class="frame" role="listitem">
+    <div class="frame__inner">
+      <img src="3.jpeg" alt="Together forever" />
+    </div>
+  </div>
+</div>
+
+          <p class="soft reveal">(Yeh shoulder pe srr rkhnaa 🫠 Yeh cheeks ko aesy krnaa 🥺 Bhtt miss krr rhaa meinn😩)</p>
+        </div>
+      </section>
+
+      <section id="scene-promise" class="scene scene--grounded" aria-label="Promise and Forever">
+        <div class="scene__inner">
+          <h2 class="heading reveal">A promise that stays</h2>
+          <p class="prose reveal">
+            I won't love you loudly. I'll love you faithfully.
+            In the way I choose you in the quiet.
+            In the way I protect your softness.
+            In the way I keep showing up — again, and again. and my love for this is neven gonna be end SO mere se jan to nhii chootay giui Itni jldiii.....   Mein hmesha apko khush rkhny ki koshish kroo ga Meri Madam G Kabhi inn ankhoon mein ansoo nhi anay doo gaaa It's my promise to you 🥺 i know sbb yeh waday krty hain lekin mein surity deta hoon orr ikhtiyaar bhi detaa apni Naib ko 🥺 Kuch bhii krr sktii bss Door janay ka option nhii 😁 So I will always Love you till my last breath even when you becomes old 😁 amma bnn jao gi tbb bhii mera pyaar aesa hii rhyy gaa ❤️
+          </p>
+
+          <div class="vows" aria-label="Promises">
+            <div class="vow reveal">I always choose you My Naib My Love 🥺 — on ordinary days and hard ones.</div>
+            <div class="vow reveal">I will be steady, patient, and true 🫠.</div>
+            <div class="vow reveal">I will keep making a home for you in my heart 🫠.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-final" class="scene scene--final" aria-label="Final Scene">
+        <div class="scene__inner">
+          <div class="finalheart" aria-hidden="true"></div>
+          
+          <div class="rose-container" aria-hidden="true">
+            <svg class="rose" viewBox="0 0 200 240" role="img" aria-label="A blooming rose">
+              <defs>
+                <linearGradient id="rosePetalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff6b6b" />
+                  <stop offset="50%" stop-color="#c11b4a" />
+                  <stop offset="100%" stop-color="#7a1028" />
+                </linearGradient>
+                <linearGradient id="roseCenterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff4757" />
+                  <stop offset="100%" stop-color="#8a1028" />
+                </linearGradient>
+                <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2d5016" />
+                  <stop offset="50%" stop-color="#4a7c2a" />
+                  <stop offset="100%" stop-color="#2d5016" />
+                </linearGradient>
+                <radialGradient id="leafGrad" cx="30%" cy="30%">
+                  <stop offset="0%" stop-color="#5a8c3a" />
+                  <stop offset="100%" stop-color="#2d5016" />
+                </radialGradient>
+              </defs>
+              
+              <g class="rose__stem-group">
+                <path class="rose__stem" d="M100 200 Q100 170 100 140" stroke="url(#stemGrad)" stroke-width="4" fill="none" stroke-linecap="round" />
+                
+                <path class="rose__leaf rose__leaf--left" d="M100 170 Q70 160 60 140 Q75 155 100 165" fill="url(#leafGrad)" />
+                <path class="rose__leaf rose__leaf--right" d="M100 160 Q130 150 140 130 Q125 145 100 155" fill="url(#leafGrad)" />
+                
+                <path class="rose__thorn" d="M100 180 L108 176 L100 172" fill="#2d5016" />
+              </g>
+              
+              <g class="rose__flower">
+                <ellipse class="rose__petal rose__petal--outer1" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" />
+                <ellipse class="rose__petal rose__petal--outer2" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(45 100 115)" />
+                <ellipse class="rose__petal rose__petal--outer3" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(90 100 115)" />
+                <ellipse class="rose__petal rose__petal--outer4" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(135 100 115)" />
+                <ellipse class="rose__petal rose__petal--outer5" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(180 100 115)" />
+                <ellipse class="rose__petal rose__petal--outer6" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(225 100 115)" />
+                <ellipse class="rose__petal rose__petal--outer7" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(270 100 115)" />
+                <ellipse class="rose__petal rose__petal--outer8" cx="100" cy="115" rx="28" ry="24" fill="url(#rosePetalGrad)" transform="rotate(315 100 115)" />
+                
+                <ellipse class="rose__petal rose__petal--mid1" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(22 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid2" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(67 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid3" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(112 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid4" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(157 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid5" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(202 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid6" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(247 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid7" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(292 100 115)" />
+                <ellipse class="rose__petal rose__petal--mid8" cx="100" cy="115" rx="20" ry="16" fill="url(#roseCenterGrad)" transform="rotate(337 100 115)" />
+                
+                <ellipse class="rose__center" cx="100" cy="115" rx="10" ry="8" fill="#5a0a1a" />
+              </g>
+            </svg>
+          </div>
+          
+          <h2 class="heading reveal">Happy Valentine's Day, My Love My Infatuation 🥺 Beautiful, Gorgeous and Pyari Naib❤️❤️ </h2>
+          <p class="prose reveal">Always yours. Always us.</p>
+          <button id="replay" class="begin begin--ghost" type="button">Replay</button>
+        </div>
+      </section>
+    </main>
+
+    <audio id="music" preload="auto" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
